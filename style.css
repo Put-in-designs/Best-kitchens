@@ -117,7 +117,7 @@ h2 {
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
     .social-media a img {
-        width: 25px; /* Smaller size for mobile screens */
+        width: 50px; /* Smaller size for mobile screens */
     }
 }
 
