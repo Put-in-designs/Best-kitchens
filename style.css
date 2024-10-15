@@ -104,20 +104,20 @@ h2 {
 
 /* Social Media Icons */
 .social-media a img {
-    width: 40px; /* Default size for larger screens */
+    width: 30px; /* Default size for larger screens */
     height: auto;
     transition: transform 0.3s;
 }
 
 /* Hover effect for social media icons */
 .social-media a:hover img {
-    transform: scale(1.2); /* Slightly enlarges icon on hover */
+    transform: scale(1.1); /* Slightly enlarges icon on hover */
 }
 
 /* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
     .social-media a img {
-        width: 50px; /* Smaller size for mobile screens */
+        width: 10px; /* Smaller size for mobile screens */
     }
 }
 
