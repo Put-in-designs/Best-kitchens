@@ -12,38 +12,114 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-    text-align: center;
-    padding: 20px;
+/* Header Styling */
+header {
+    position: relative;
+    overflow: hidden; /* Ensure content is contained within the header */
 }
 
-/* Logo and Navigation */
+/* Top Header with Logo and Social Media */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+}
+
 .logo {
-    max-width: 300px;
+    max-width: 150px; /* Adjusted for better scaling */
     height: auto;
-    margin-bottom: 50px;
 }
 
-nav ul {
+.social-media-header a img {
+    width: 40px; /* Increased size for larger icons */
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-media-header a:hover img {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Navigation Menu */
+.main-nav {
+    background-color: #295a8f;
+    padding: 10px 0;
+}
+
+.main-nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
 }
 
-nav a {
+.main-nav a {
     text-decoration: none;
-    color: #333;
-    padding: 8px;
-    transition: color 0.3s;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
 }
 
-nav a:hover {
-    color: #295a8f;
+.main-nav a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+/* Background Image with Animated Text */
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay effect */
+}
+
+.header-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7; /* Slight transparency for a dark effect */
+    z-index: -1;
+}
+
+.animated-text {
+    text-align: center;
+    color: #fff;
+}
+
+.slogan, .highlighted-text {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+}
+
+.highlighted-text {
+    font-size: 3rem;
+    color: #ffffff; /* Highlight color */
+    animation: fadeIn 3s ease-in-out 3s forwards;
+}
+
+.quote-button {
+    background-color: #295a8f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.quote-button:hover {
+    background-color: #0056b3;
 }
 
 /* Section Styles */
@@ -78,8 +154,34 @@ h2 {
     .gallery-container img {
         width: 100px; /* Smaller size for mobile screens */
     }
-}
 
+    .slogan, .highlighted-text {
+        font-size: 1.5rem; /* Smaller text for mobile */
+    }
+
+    .header-content {
+        height: 300px; /* Adjusted height for smaller screens */
+    }
+
+    .top-header {
+        flex-direction: column; /* Stack logo and social icons */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center navigation items */
+    }
+
+    .main-nav a {
+        padding: 10px 5px; /* Adjust padding for smaller screens */
+    }
+
+    .quote-button {
+        padding: 8px 15px; /* Smaller button for mobile */
+        font-size: 14px; /* Smaller text size */
+    }
+}
 
 /* WhatsApp Floating Button */
 .whatsapp-button {
@@ -102,40 +204,27 @@ h2 {
     height: auto;
 }
 
-/* Social Media Icons */
-.social-media a img {
-    width: 30px; /* Default size for larger screens */
-    height: auto;
-    transition: transform 0.3s;
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333; /* Dark background */
+    color: #fff;      /* White text */
 }
 
-/* Hover effect for social media icons */
-.social-media a:hover img {
-    transform: scale(1.2); /* Slightly enlarges icon on hover */
+footer p {
+    color: #fdfdfd;
+    font-size: 14px;
 }
 
-/* Responsive adjustments for mobile devices */
-@media (max-width: 768px) {
-    .social-media a img {
-        width: 10px; /* Smaller size for mobile screens */
+/* Animation Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-
-/* Quote Button Styles */
-.quote-button {
-    background-color: #295a8f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.quote-button:hover {
-    background-color: #0056b3;
-}
-
-
